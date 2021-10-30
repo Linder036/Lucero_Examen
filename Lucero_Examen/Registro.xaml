@@ -1,0 +1,45 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Lucero_Examen.MainPage">
+
+    <StackLayout>
+        <Frame BackgroundColor="#2196F3" Padding="24" CornerRadius="0">
+            <Label Text="Registro" HorizontalTextAlignment="Center" TextColor="White" FontSize="10"/>
+            </Frame>
+
+            <Label x:Name="lblUsuario"/>
+            <Label x:Name="lblContrasena"/>
+
+            <Entry x:Name="txtUsuario"/>
+            <Entry x:Name="txtContrasena"/>
+
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    
+                </Grid.RowDefinitions>
+
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                </Grid.ColumnDefinitions>
+
+            <Label Text="Ingrese su Nombre" Grid.Row="0" Grid.Column="0"/>
+            <Entry x:Name="txtNombre" Keyboard="Text" Grid.Row="0" Grid.Column="1"/>
+
+            <Label Text="Ingrese Monto Inicial" Grid.Row="1" Grid.Column="0"/>
+            <Entry x:Name="txtMinicial" Keyboard="Numeric" Grid.Row="1" Grid.Column="1" TextChanged="txtMinicial_TextChanged"/>
+
+            <Label Text="Su cuota mensual es de" Grid.Row="2" Grid.Column="0"/>
+            <Entry x:Name="txtMensual" IsReadOnly="True" Grid.Row="2" Grid.Column="1" TextChanged="txtMensual_TextChanged"/>
+
+        </Grid>
+        
+            <Button x:Name="btnMensual" Text="Calcular" Clicked="btnMensual_Clicked"/>
+        
+    </StackLayout>
+
+</ContentPage>
